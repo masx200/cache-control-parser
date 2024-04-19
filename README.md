@@ -25,7 +25,7 @@ parser.
 To use cache-control-parser in your project, run:
 
 ```bash
-npm install cache-control-parser
+npm install "@masx200/cache-control-parser"
 ```
 
 ### Usage
@@ -33,7 +33,7 @@ npm install cache-control-parser
 **Example** - parse a string of cache control directives into an object:
 
 ```javascript
-import { parse } from "cache-control-parser";
+import { parse } from "@masx200/cache-control-parser";
 
 const directives = parse(
   "public, max-age=300, no-transform",
@@ -55,7 +55,7 @@ Output:
 **Example** - destructuring the cache control object:
 
 ```javascript
-import { parse } from "cache-control-parser";
+import { parse } from "@masx200/cache-control-parser";
 
 const directives = parse(
   "max-age=300, s-maxage=0",
@@ -67,7 +67,7 @@ const { "max-age": maxAge, "s-maxage": sMaxAge } = directives;
 **Example** - retrieve the shared proxy cache TTL:
 
 ```javascript
-import { parse } from "cache-control-parser";
+import { parse } from "@masx200/cache-control-parser";
 
 const { "max-age": maxAge, "s-maxage": ttl = maxAge } = parse(
   "max-age=300, s-maxage=0",
@@ -85,7 +85,7 @@ ttl: 0
 **Example** - stringify a cache control object:
 
 ```javascript
-import { stringify } from "cache-control-parser";
+import { stringify } from "@masx200/cache-control-parser";
 
 const cacheControl = stringify({
   "max-age": 300,
@@ -105,7 +105,7 @@ max-age=300, s-maxage=3600, public
 **Example** - Next.js API route response header:
 
 ```typescript
-import { stringify } from "cache-control-parser";
+import { stringify } from "@masx200/cache-control-parser";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
@@ -144,7 +144,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
 Type definitions are included in this library and exposed via:
 
 ```typescript
-import type { CacheControl } from "cache-control-parser";
+import type { CacheControl } from "@masx200/cache-control-parser";
 ```
 
 ## Built with
@@ -191,4 +191,4 @@ yarn test:watch
 This project is licensed under the MIT License - see the LICENSE file for
 details.
 
-优化了stringify,如果boolean值为false,则不返回对应的key
+## 优化了stringify,如果boolean值为false,则不返回对应的key
