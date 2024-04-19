@@ -122,7 +122,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
 
 ## Supported Directives
 
-```
+```ts
 {
   "max-age"?: number;
   "s-maxage"?: number;
@@ -183,8 +183,7 @@ yarn test:watch
 
 ## Authors
 
-- **Etienne Martin** - _Initial work_ -
-  [etiennemartin.ca](https://etiennemartin.ca/)
+- **masx200** - _Initial work_ - [etiennemartin.ca](https://etiennemartin.ca/)
 
 ## License
 

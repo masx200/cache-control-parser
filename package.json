@@ -5,7 +5,7 @@
   },
   "type": "module",
   "name": "@masx200/cache-control-parser",
-  "version": "2.1.7",
+  "version": "2.2.0",
   "description": "A humble cache-control parser",
   "homepage": "https://github.com/masx200/cache-control-parser",
   "keywords": [
@@ -19,7 +19,7 @@
   ],
   "license": "MIT",
   "author": {
-    "name": "Etienne Martin"
+    "name": "masx200"
   },
   "repository": {
     "type": "git",
