@@ -1,4 +1,8 @@
 {
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "type": "module",
   "name": "@masx200/cache-control-parser",
   "version": "2.0.6",
