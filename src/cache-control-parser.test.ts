@@ -2,7 +2,7 @@ import { CacheControl, parse, stringify } from "./";
 import {
   parse as compiledParser,
   stringify as compiledStringifier,
-} from "../dist";
+} from "./index.ts";
 
 const testSuite = (parser: typeof parse, stringifier: typeof stringify) => {
   describe("parse", () => {
