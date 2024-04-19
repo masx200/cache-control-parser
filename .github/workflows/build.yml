@@ -29,11 +29,11 @@ jobs:
       - name: Test
         run: yarn test
 
-      - name: Publish code coverage
-        if: endsWith(github.ref, '/main') && github.event_name == 'push'
-        run: yarn coverage
-        env:
-          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+      # - name: Publish code coverage
+      #   if: endsWith(github.ref, '/main') && github.event_name == 'push'
+      #   run: yarn coverage
+      #   env:
+      #     COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
 
       - name: Publish to npm
         if: endsWith(github.ref, '/main') && github.event_name == 'push'
