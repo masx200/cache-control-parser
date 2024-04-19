@@ -4,8 +4,8 @@ A humble
 [cache-control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
 parser.
 
-[![Build status](https://github.com/etienne-martin/cache-control-parser/workflows/Build/badge.svg)](https://github.com/etienne-martin/cache-control-parser/actions)
-[![Coveralls github](https://img.shields.io/coveralls/github/etienne-martin/cache-control-parser.svg)](https://coveralls.io/github/etienne-martin/cache-control-parser)
+[![Build status](https://github.com/masx200/cache-control-parser/workflows/Build/badge.svg)](https://github.com/masx200/cache-control-parser/actions)
+[![Coveralls github](https://img.shields.io/coveralls/github/masx200/cache-control-parser.svg)](https://coveralls.io/github/masx200/cache-control-parser)
 [![npm monthly downloads](https://img.shields.io/npm/dm/cache-control-parser.svg)](https://www.npmjs.com/package/cache-control-parser)
 
 ## Features
@@ -162,7 +162,7 @@ make via issue, email, or any other method with the owners of this repository
 before making a change.
 
 Update the
-[README.md](https://github.com/etienne-martin/cache-control-parser/blob/master/README.md)
+[README.md](https://github.com/masx200/cache-control-parser/blob/master/README.md)
 with details of changes to the library.
 
 Execute `yarn test` and update the tests if needed.
