@@ -27,7 +27,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "concurrently 'webpack --mode development --watch' 'tsc --watch'",
-    "build": "concurrently 'webpack --mode production' 'tsc'",
+    "build": "tsc && concurrently 'webpack --mode production' 'tsc'",
     "predev": "yarn cleanup",
     "prebuild": "yarn cleanup",
     "cleanup": "rm -rf ./dist",
