@@ -1,6 +1,8 @@
 # cache-control-parser
 
-A humble [cache-control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) parser.
+A humble
+[cache-control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
+parser.
 
 [![Build status](https://github.com/etienne-martin/cache-control-parser/workflows/Build/badge.svg)](https://github.com/etienne-martin/cache-control-parser/actions)
 [![Coveralls github](https://img.shields.io/coveralls/github/etienne-martin/cache-control-parser.svg)](https://coveralls.io/github/etienne-martin/cache-control-parser)
@@ -34,7 +36,7 @@ npm install cache-control-parser
 import { parse } from "cache-control-parser";
 
 const directives = parse(
-  "public, max-age=300, no-transform"
+  "public, max-age=300, no-transform",
 );
 
 console.log(directives);
@@ -56,7 +58,7 @@ Output:
 import { parse } from "cache-control-parser";
 
 const directives = parse(
-  "max-age=300, s-maxage=0"
+  "max-age=300, s-maxage=0",
 );
 
 const { "max-age": maxAge, "s-maxage": sMaxAge } = directives;
@@ -68,7 +70,7 @@ const { "max-age": maxAge, "s-maxage": sMaxAge } = directives;
 import { parse } from "cache-control-parser";
 
 const { "max-age": maxAge, "s-maxage": ttl = maxAge } = parse(
-  "max-age=300, s-maxage=0"
+  "max-age=300, s-maxage=0",
 );
 
 console.log("ttl:", ttl);
@@ -88,7 +90,7 @@ import { stringify } from "cache-control-parser";
 const cacheControl = stringify({
   "max-age": 300,
   "s-maxage": 3600,
-  "public": true
+  "public": true,
 });
 
 console.log(cacheControl);
@@ -111,7 +113,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
     "Cache-Control",
     stringify({
       "max-age": 300,
-    })
+    }),
   );
 
   res.send("Hello world");
@@ -147,15 +149,21 @@ import type { CacheControl } from "cache-control-parser";
 
 ## Built with
 
-- [node.js](https://nodejs.org/en/) - Cross-platform JavaScript run-time environment for executing JavaScript code server-side.
-- [TypeScript](https://www.typescriptlang.org/) - Typed superset of JavaScript that compiles to plain JavaScript.
+- [node.js](https://nodejs.org/en/) - Cross-platform JavaScript run-time
+  environment for executing JavaScript code server-side.
+- [TypeScript](https://www.typescriptlang.org/) - Typed superset of JavaScript
+  that compiles to plain JavaScript.
 - [Jest](https://facebook.github.io/jest/) - Delightful JavaScript Testing.
 
 ## Contributing
 
-When contributing to this project, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
+When contributing to this project, please first discuss the change you wish to
+make via issue, email, or any other method with the owners of this repository
+before making a change.
 
-Update the [README.md](https://github.com/etienne-martin/cache-control-parser/blob/master/README.md) with details of changes to the library.
+Update the
+[README.md](https://github.com/etienne-martin/cache-control-parser/blob/master/README.md)
+with details of changes to the library.
 
 Execute `yarn test` and update the tests if needed.
 
@@ -175,8 +183,12 @@ yarn test:watch
 
 ## Authors
 
-- **Etienne Martin** - _Initial work_ - [etiennemartin.ca](https://etiennemartin.ca/)
+- **Etienne Martin** - _Initial work_ -
+  [etiennemartin.ca](https://etiennemartin.ca/)
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the LICENSE file for
+details.
+
+优化了stringify,如果boolean值为false,则不返回对应的key

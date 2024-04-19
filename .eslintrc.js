@@ -4,12 +4,12 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
     "prettier",
-    "prettier/@typescript-eslint"
+    "prettier/@typescript-eslint",
   ],
   plugins: ["@typescript-eslint"],
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: "module"
+    sourceType: "module",
   },
   rules: {
     "@typescript-eslint/no-var-requires": 0,
@@ -17,6 +17,6 @@ module.exports = {
     "@typescript-eslint/no-namespace": 0,
     "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/prefer-optional-chain": 1,
-    "no-console": ["error"]
-  }
+    "no-console": ["error"],
+  },
 };

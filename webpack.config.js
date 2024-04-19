@@ -7,17 +7,17 @@ module.exports = (env, argv = {}) => {
   return {
     mode: argv.mode || "production",
     entry: {
-      index: "./src/index.ts"
+      index: "./src/index.ts",
     },
     output: {
       globalObject: "this",
       filename: "[name].js",
       path: path.resolve(__dirname, "dist"),
       libraryTarget: "umd",
-      library: "cacheControl"
+      library: "cacheControl",
     },
     resolve: {
-      extensions: [".ts", ".js"]
+      extensions: [".ts", ".js"],
     },
     module: {
       rules: [
@@ -30,10 +30,10 @@ module.exports = (env, argv = {}) => {
               loader: "eslint-loader",
               options: {
                 emitWarning: true,
-                emitError: !isDev
-              }
-            }
-          ]
+                emitError: !isDev,
+              },
+            },
+          ],
         },
         {
           test: /\.(js|ts)$/,
@@ -45,18 +45,18 @@ module.exports = (env, argv = {}) => {
                 presets: ["@babel/typescript", ["@babel/preset-env"]],
                 plugins: [
                   ["@babel/plugin-proposal-class-properties", { loose: true }],
-                  ["@babel/plugin-proposal-optional-chaining"]
-                ]
-              }
-            }
-          ]
-        }
-      ]
+                  ["@babel/plugin-proposal-optional-chaining"],
+                ],
+              },
+            },
+          ],
+        },
+      ],
     },
     plugins: [
       new ForkTsCheckerWebpackPlugin({
-        formatter: "codeframe"
-      })
-    ]
+        formatter: "codeframe",
+      }),
+    ],
   };
 };
