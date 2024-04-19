@@ -43,7 +43,7 @@
     "@babel/preset-env": "7.5.5",
     "@babel/preset-typescript": "7.3.3",
     "@types/jest": "22.2.3",
-    "@typescript-eslint/eslint-plugin": "2.11.0",
+    "@typescript-eslint/eslint-plugin": "2.34.0",
     "@typescript-eslint/parser": "2.11.0",
     "babel-loader": "8.0.6",
     "concurrently": "5.1.0",
