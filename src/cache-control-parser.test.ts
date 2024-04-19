@@ -1,9 +1,9 @@
-import { CacheControl, parse, stringify } from "./";
+import { CacheControl, parse, stringify } from "./index.ts";
 import {
   parse as compiledParser,
   stringify as compiledStringifier,
 } from "./index.ts";
-
+import { describe, expect, test } from "vitest";
 const testSuite = (parser: typeof parse, stringifier: typeof stringify) => {
   describe("parse", () => {
     test("should parse empty cache-control header", () => {

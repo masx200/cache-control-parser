@@ -27,17 +27,18 @@
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "dev": "concurrently 'webpack --mode development --watch' 'tsc --watch'",
+    "dev": "concurrently 'rollup -c --watch' 'tsc --watch'",
     "build": "tsc && rollup -c",
     "predev": "yarn cleanup",
     "prebuild": "yarn cleanup",
     "cleanup": "rm -rf ./dist",
-    "test": "jest src --coverage --verbose --runInBand",
-    "test:watch": "jest src --coverage --verbose --watch",
+    "test": "vitest run",
+    "test:watch": "vitest run --watch",
     "coverage": "coveralls < ./coverage/lcov.info"
   },
   "dependencies": {},
   "devDependencies": {
+    "vitest": "^1.5.0",
     "rollup-plugin-esbuild": "^6.1.1",
     "esbuild": "^0.20.2",
     "rollup": "^4.14.3",
