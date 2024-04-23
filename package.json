@@ -50,7 +50,7 @@
     "@babel/plugin-proposal-class-properties": "7.7.0",
     "@babel/plugin-proposal-optional-chaining": "7.7.5",
     "@babel/preset-env": "7.5.5",
-    "@babel/preset-typescript": "7.3.3",
+    "@babel/preset-typescript": "7.24.1",
     "@types/jest": "22.2.3",
     "@typescript-eslint/eslint-plugin": "2.34.0",
     "@typescript-eslint/parser": "2.11.0",
